@@ -1,0 +1,11 @@
+orm:
+  default:
+    mysql: ENV[MYSQL_URI]
+    redis: ENV[REDIS_HITRIX]
+    locker: default
+    local_cache: 1000
+  search:
+    redis: ENV[REDIS_HITRIX]
+authentication:
+  secret: ENV[SECRET_KEY]
+  support_otp: true

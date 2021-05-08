@@ -1,0 +1,29 @@
+type Image {
+    id: ID!
+    caption: String!
+    userName: String!
+    link: String!
+    slug: String!
+    created: String!
+    category: ImageCategory
+}
+
+type ImageCategory {
+    name: String!
+    id: ID!
+}
+
+input NewImage {
+    link: String!
+    caption: String!
+    userName: String!
+    category: String!
+}
+
+type Mutation {
+    createImage(input: NewImage!): Image!
+}
+
+type Query {
+    images(search: String): [Image!]!
+}
